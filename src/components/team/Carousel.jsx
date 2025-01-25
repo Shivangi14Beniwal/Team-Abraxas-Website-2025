@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import "../../styles/team/carousel.css";
 import CC from '../../assets/cc.json';
+import Alumni from '../../assets/Alumni.json'
 import FinalYearMember from '../../assets/final_year.json'
 import ThirdYearMembers from '../../assets/third_year.json';
 import SecondYearMembers from '../../assets/second_year.json';
@@ -27,6 +28,9 @@ const Carousel = (props) => {
     } else if (year === 4) {
         Members = FinalYearMember;
         YearTitle = "Final Year"
+    } else if (year === 5) {
+        Members = Alumni;
+        YearTitle = "Our Alumni"
     }
     else {
         Members = ThirdYearMembers;
